@@ -10,9 +10,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import java.util.HashMap;
-import java.util.Map;
-
 @Controller
 public class CacheController {
 
@@ -26,9 +23,9 @@ public class CacheController {
     }
 
     //Her bliver man bedt om at indtaste et tal (ens ID)
-    @GetMapping("/form")
+    @GetMapping("/index")
     public String idForm(){
-        return "form";
+        return "index";
     }
 
 
