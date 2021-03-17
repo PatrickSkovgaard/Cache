@@ -22,7 +22,7 @@ public class CacheController {
     //Her bliver man bedt om at indtaste et tal (ens ID)
     @GetMapping("/index")
     public String idForm(){
-        return "index";
+        return "index.html";
     }
 
 
