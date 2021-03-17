@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../static/form.css">
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome</h1>
+        <h3>Type an id</h3>
+        <p>If the id exists, the randomly generated string will be shown from the cache</p>
+        <p>Otherwise, a randomly generated string will be created and saved in the cache</p>
+    </header>
+    <form action="/submit-form" method="post">
+        <label for userId>User Id: </label>
+        <input type="text" id="userId" name="userId" placeholder="Type id">
+
+
+        <button type="submit" class="button">Submit</button>
+    </form>
+</body>
+</html>

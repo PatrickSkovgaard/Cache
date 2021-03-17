@@ -1,0 +1,52 @@
+body {
+    background-image: url("image/3mtm-di-noctm-random-style-rs-1189.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+header h1 {
+    display: flex;
+    justify-content: center;
+    font-family: "Franklin Gothic Book";
+    color: khaki;
+    font-size: 50px;
+}
+
+header h3 {
+    display: flex;
+    justify-content: center;
+    font-family: "Times New Roman";
+    font-weight: bold;
+    color: khaki;
+    font-size: 30px;
+}
+
+header p {
+    display: flex;
+    justify-content: center;
+    font-family: "Times New Roman";
+    color: snow;
+    font-size: 20px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+form label {
+    margin-right: 5px;
+    font-style: italic;
+    color: lavender;
+    font-size: 20px;
+}
+
+form input {
+    margin-right: 10px;
+}
+
+form button:hover {
+    background-color: lightgray;
+}
