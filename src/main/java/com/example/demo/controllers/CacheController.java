@@ -17,10 +17,7 @@ public class CacheController {
     Cache cache = new Cache();
 
     //Index siden redirecter til /form siden
-    @GetMapping("/")
-    public String showForm(){
-        return "redirect:/index";
-    }
+
 
     //Her bliver man bedt om at indtaste et tal (ens ID)
     @GetMapping("/index")
