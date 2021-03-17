@@ -1,6 +1,6 @@
 # Cache
 
-                          //VIGTIGT
+                          VIGTIGT
 OBS: Når man laver en ny user med det ID man indtaster, og bliver ført til denne side
 hvor der vil stå 'localhost:8080/get-user-data?userId="dit tal"', skal man refreshe siden
 før at den viser den tilfældige streng. Den starter med at vise en blank side, når man opretter
