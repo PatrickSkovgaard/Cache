@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
+    <link rel="stylesheet" href="../static/cache.css">
     <meta charset="UTF-8">
     <title>Cache</title>
 </head>
 <body>
-    <p th:text="${userId}"></p>
+    <header>
+        <h1>Your user id has now been assigned a random string! </h1>
+        <h3>Please refresh the page to check the string. (ctrl + R)</h3>
+    </header>
+    <main>
+
+    <p id="id" th:text="${userId}"></p>
+
+    </main>
+
+    <section id="button">
+    <button type="reset" class="button"><a href="index">Main Page</a></button>
+    </section>
+
+    <footer>
+        <p>Made by: Patrick Skovgaard - DAT20C</p>
+    </footer>
 </body>
 </html>

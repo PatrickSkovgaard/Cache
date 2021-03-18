@@ -30,9 +30,11 @@ public class CacheController {
     @PostMapping("/submit-form")
     public String submitForm(@RequestParam (name = "userId") String userId, RedirectAttributes attributes) throws InterruptedException {
         attributes.addAttribute("userId", userId);
-        return "redirect:/get-user-data";
+        return "redirect:/get-user-data-html";
     }
 
+
+    /*
 
     //Denne metode bruger dit tal (ID) til at enten vise din tilfældige streng, eller generere en ny for dig.
     @GetMapping("/get-user-data")
@@ -46,8 +48,11 @@ public class CacheController {
         //useren som får genereret en tilfældig streng, og har ventet på at browseren har tænkt.
 
 
+
+
         //Laver en ny User med id = userId (Request parameteret). Dette id er en key der skal bruges.
         User user = new User(userId);
+
 
 
         //Tjekker om keyen findes, for useren.
@@ -55,8 +60,11 @@ public class CacheController {
                                 // (det man indtaster i formen, som ryger ind i browser-adressen).
 
 
-        //Hvis cachen har dette id for useren, skal den genere den tilfældige streng, som er gemt i cachen for id.
-        //Ellers, så opretter den en tilfældig streng for useren og gemmer denne i cachen, under id'et som key.
+
+        //Hvis cachen har dette id for useren, skal den genere den tilfældige streng,
+        //som er gemt i cachen for id.
+        //Ellers, så opretter den en tilfældig streng for useren og gemmer denne i cachen,
+        //under id'et som key.
         if (cache.has(user.getId())){
             return cache.get(user.getId());
         }
@@ -65,9 +73,11 @@ public class CacheController {
         }
     }
 
+*/
+
     @GetMapping("/get-user-data-html")
-    public String getData(@RequestParam (name = "userId") String id, Model model) throws InterruptedException {
-        User user = new User(id);
+    public String getData(@RequestParam (name = "userId") String userId, Model model) throws InterruptedException {
+        User user = new User(userId);
 /*
         cache.get(user.getId());
 
@@ -91,6 +101,16 @@ public class CacheController {
 
  */
 
+        cache.get(user.getId());
+
+        if (cache.has(user.getId())){
+            cache.get(user.getId());
+            model.addAttribute("userId", cache.get(user.getId()));
+        }
+        else {
+            cache.set(user.getId(), user.getDataSlow());
+
+        }
 
         return "cache";
     }
